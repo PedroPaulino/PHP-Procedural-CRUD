@@ -4,6 +4,17 @@ session_start();
 // CONEXÃO
 require_once 'db_connect.php';
 
+// PROTEGENDO CONTRA XSS CROSS SITE SCRIPTING E SQL INJECTION
+function clear($input) {
+    global $connect;
+    //sql
+    $clearsql = mysqli_escape_string($connect, $input);
+    //xss
+    $clearxss = htmlspecialchars($clearsql);
+
+    return $clearxss;
+
+}
 if(isset($_POST['btn-cadastrar'])):
     $nome = mysqli_escape_string($connect, $_POST['nome']);
     $sobrenome = mysqli_escape_string($connect, $_POST['sobrenome']);
