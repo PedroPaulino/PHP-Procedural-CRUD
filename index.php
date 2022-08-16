@@ -42,7 +42,7 @@ include_once "./includes/message.php";
                         <div id="modal<?php echo $dados['id']; ?>" class="modal">
                             <div class="modal-content">
                                 <h4> Atenção <i class="material-icons">report</i></h4>
-                                <p>Tem certeza que deseja excluir esse cliente ?</p>
+                                <p>Tem certeza que deseja excluir esse funcionario ?</p>
                             </div>
                             <div class="modal-footer">
                                 <form action="php_action/delete.php" method="POST">
