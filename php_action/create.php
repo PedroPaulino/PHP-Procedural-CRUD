@@ -16,10 +16,10 @@ function clear($input) {
 
 }
 if(isset($_POST['btn-cadastrar'])):
-    $nome = mysqli_escape_string($connect, $_POST['nome']);
-    $sobrenome = mysqli_escape_string($connect, $_POST['sobrenome']);
-    $chapa = mysqli_escape_string($connect, $_POST['chapa']);
-    $departamento = mysqli_escape_string($connect, $_POST['departamento']);
+    $nome = mysqli_escape_string($_POST['nome']);
+    $sobrenome = mysqli_escape_string($_POST['sobrenome']);
+    $chapa = mysqli_escape_string($_POST['chapa']);
+    $departamento = mysqli_escape_string($_POST['departamento']);
 
     $sql = "INSERT INTO funcionarios (nome, sobrenome, chapa, departamento) VALUES ('$nome', '$sobrenome', '$chapa', '$departamento')";
 
